@@ -11,8 +11,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
-// creating connection to database
-const dbURI = 'mongodb+srv://mzubairtariq1:siqAbkJ2V9axxE3a@ubicluster.fixyzrq.mongodb.net/';
+// configuring and creating connection to database
+
+require('dotenv').config();
+
+const dbUserName = process.env.MONGODB_USERNAME
+const dbPassword = process.env.MONGODB_PASSWORD
+const dbCluster = process.env.MONGODB_CLUSTER
+
+const dbURI = `mongodb+srv://${dbUserName}:${dbPassword}@${dbCluster}.mongodb.net/`;
 
 mongoose.connect(dbURI)
     .then(() => console.log('Backend is connected to database'))
