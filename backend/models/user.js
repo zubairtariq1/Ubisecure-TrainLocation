@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    googleId: String, // OAuth2.0 Google ID
+    googleId: String,
     username: String,
     email: String,
-    password: String, // Hashed password
+    password: String,
 });
 
 module.exports = mongoose.model('User', userSchema);
