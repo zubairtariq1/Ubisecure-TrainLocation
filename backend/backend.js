@@ -9,6 +9,9 @@ const app = express();
 // Middleware to use body-parser and passport
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//requiring passport configs
+require('./config/oauth2-setup');
 app.use(passport.initialize());
 
 // configuring and creating connection to database
