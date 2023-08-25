@@ -4,7 +4,7 @@
   "description": "technical assignment backend",
   "main": "index.js",
   "scripts": {
-    "start": "backend.js"
+    "start": "node backend.js"
   },
   "keywords": [],
   "author": "Zubair Tariq",
