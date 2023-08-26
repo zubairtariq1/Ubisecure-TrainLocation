@@ -3,16 +3,20 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const authRoutes = require('./routes/authRoutes');
+const cors = require('cors');
 
 const app = express();
+
+//requiring passport configs
+require('./config/oauth2-setup');
 
 // Middleware to use body-parser and passport
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//requiring passport configs
-require('./config/oauth2-setup');
+
 app.use(passport.initialize());
+app.use(cors());
 
 // configuring and creating connection to database
 

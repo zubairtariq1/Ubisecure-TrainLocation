@@ -4,14 +4,14 @@ const User = require('../models/User');
 
 require('dotenv').config();
 
-const googleID = process.env.GOOGLEC_CLIENTID
-const googleSecret = process.env.GOOGLE_CLIENTSEC
+const googleClientID = process.env.GOOGLE_CLIENTID;
+const googleClientSecret = process.env.GOOGLE_CLIENTSEC;
 
 passport.use(
     new GoogleStrategy(
         {
-            clientID: googleID,
-            clientSecret: googleSecret,
+            clientID: googleClientID,
+            clientSecret: googleClientSecret,
             callbackURL: '/auth/google/callback',
         },
         async (accessToken, refreshToken, profile, done) => {

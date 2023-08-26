@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ece63160-56b9-46cb-8d77-763f2b441fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/oauth2-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/oauth2-setup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/src/cmap/auth/mongodb_oidc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/src/cmap/auth/mongodb_oidc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +54,14 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ubisecure-TrainLocation\frontend\src\components" />
+      <recent name="D:\Ubisecure-TrainLocation\backend" />
       <recent name="D:\Ubisecure-TrainLocation" />
     </key>
   </component>
@@ -67,6 +75,9 @@
       <updated>1692985426723</updated>
       <workItem from="1692985428171" duration="9012000" />
       <workItem from="1692997589405" duration="929000" />
+      <workItem from="1692999820146" duration="1604000" />
+      <workItem from="1693051082026" duration="1992000" />
+      <workItem from="1693053135281" duration="9234000" />
     </task>
     <servers />
   </component>
