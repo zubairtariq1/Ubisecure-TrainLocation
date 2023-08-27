@@ -33,7 +33,7 @@ mongoose.connect(dbURI)
     .catch(err => console.error('Database connection error', err));
 
 // setting Routes
-app.use('/api', authRoutes);
+app.use('/api/auth', authRoutes);
 
 // Starting the server
 const PORT = process.env.PORT || 8000;

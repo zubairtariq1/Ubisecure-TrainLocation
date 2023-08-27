@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from './axiosConfig';
 
-function UserRegistration() {
+function AuthPage() {
+    const [action, setAction] = useState('register'); // 'register' or 'login'
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -9,16 +10,22 @@ function UserRegistration() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/api/register', { username, email, password });
-            console.log('User registered successfully');
+            const response = await axios.post('/api/auth', {
+                username,
+                email,
+                password,
+                action, // Send the current action to the backend
+            });
+            console.log('Authentication successful:', response.data);
+            // Perform appropriate action based on response, e.g., redirect to profile
         } catch (error) {
-            console.log('Registration failed:', error);
+            console.error('Authentication failed:', error.response.data.message);
         }
     };
 
     return (
         <div>
-            <h2>User Registration</h2>
+            <h2>{action === 'register' ? 'User Registration' : 'User Login'}</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="username">Username:</label>
@@ -50,10 +57,25 @@ function UserRegistration() {
                         required
                     />
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit">
+                    {action === 'register' ? 'Register' : 'Login'}
+                </button>
             </form>
+            <div>
+                {action === 'register' ? (
+                    <p>
+                        Already have an account?{' '}
+                        <span onClick={() => setAction('login')}>Login by clicking <strong>here</strong></span>
+                    </p>
+                ) : (
+                    <p>
+                        New user?{' '}
+                        <span onClick={() => setAction('register')}>Register by clicking <strong>here</strong></span>
+                    </p>
+                )}
+            </div>
         </div>
     );
 }
 
-export default UserRegistration;
+export default AuthPage;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from './axiosConfig';
 
-function UserProfile() {
+function ProfilePage() {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -32,4 +32,4 @@ function UserProfile() {
     );
 }
 
-export default UserProfile;
+export default ProfilePage;
